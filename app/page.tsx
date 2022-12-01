@@ -1,9 +1,13 @@
-import {WTDatePicker} from "../componets/UI/WTDatePicker";
+import React from 'react'
+
+import WTHeader from '../components/Layout/WTHeader'
+import About from '../components/MainPage/About'
 
 export default function Home() {
     return (
-        <div className='bg-white fle text-black-300 justify-center text-3xl'>
-            <WTDatePicker/>
+        <div>
+            <WTHeader />
+            <About />
         </div>
     )
 }

@@ -1,0 +1,9 @@
+ .button {
+    @apply text-black-300 bg-accent hover:shadow-md border border-accent hover:transition-all;
+  }
+
+  .outlined {
+    @apply text-grey-200 bg-transparent border border-white hover:bg-accent hover:text-white hover:border-accent py-4 px-5 transition-all;
+  }
+
+
