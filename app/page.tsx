@@ -5,9 +5,9 @@ import About from '../components/MainPage/About'
 
 export default function Home() {
     return (
-        <div>
+        <>
             <WTHeader />
             <About />
-        </div>
+        </>
     )
 }
