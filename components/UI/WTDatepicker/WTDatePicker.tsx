@@ -2,22 +2,33 @@
 
 import 'react-datepicker/dist/react-datepicker.css'
 
-import React, { useState } from 'react'
-import DatePicker from 'react-datepicker'
+import ru from 'date-fns/locale/ru'
+import type { FC } from 'react'
+import React from 'react'
+import DatePicker, { registerLocale } from 'react-datepicker'
 
-import s from './WTDatepicker.module.css'
+import WTInput from '../WtInput/WTInput'
+import './WTDatepicker.css'
 
-// type DatePickerProps = {
-//     props: React.ComponentPropsWithoutRef<'input'>
-// }
+type DatePickerProps = {
+    value: Date | null
+    onChange: (data: Date) => void
+}
+registerLocale('ru', ru)
 
-export const WTDatePicker = () => {
-    const [startDate, setStartDate] = useState(new Date())
+export const WTDatePicker: FC<DatePickerProps> = ({ value, onChange }) => {
     return (
-        <DatePicker
-            calendarClassName={s.datepicker}
-            selected={startDate}
-            onChange={(date: Date) => setStartDate(date)}
-        />
+        <div className="w-full">
+            <DatePicker
+                locale="ru"
+                calendarClassName="wt-data-picker"
+                selected={value}
+                minDate={new Date()}
+                onChange={(date: Date) => onChange(date)}
+                placeholderText={'ДД/ММ/ГГ'}
+                customInput={<WTInput icon="date" full />}
+                dateFormat="dd/MM/yyyy"
+            />
+        </div>
     )
 }

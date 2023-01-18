@@ -1,0 +1,33 @@
+.wt-data-picker {
+    font-size: 18px;
+    color: black;
+}
+
+.wt-data-picker .react-datepicker__day--selected,
+.wt-data-picker .react-datepicker__day--keyboard-selected{
+    background-color: rgba(255, 168, 0, 0.31)!important;
+    border: 1px solid rgba(255, 168, 0, 1)!important;
+    color: black!important;
+    font-weight: normal!important;
+}
+
+.wt-data-picker .react-datepicker__day--weekend {
+    font-weight: 600
+}
+
+.wt-data-picker .react-datepicker__day-names {
+    display: none;
+}
+
+.wt-data-picker .react-datepicker__current-month {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.wt-data-picker .react-datepicker__header {
+    background: white;
+}
+
+.wt-data-picker .react-datepicker__navigation {
+    top: 13px;
+}
