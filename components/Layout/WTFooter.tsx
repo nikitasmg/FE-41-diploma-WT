@@ -10,6 +10,10 @@ import WTInput from '../UI/WtInput/WTInput'
 
 const WtFooter = () => {
     const [mail, setMail] = useState('')
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    }
     return (
         <footer className="w-full bg-black-300 pt-[50px]">
             <div className="mx-auto flex max-w-7xl">
@@ -84,7 +88,14 @@ const WtFooter = () => {
             <div className="border-t-[1px] border-grey-200 py-[32px]">
                 <div className="mx-auto flex max-w-7xl justify-between">
                     <span className="text-4xl font-black text-white">Logo</span>
-                    <button>top</button>
+                    <button onClick={scrollToTop}>
+                        <Image
+                            src={'/icons/icon-top.svg'}
+                            alt={'icon-top'}
+                            width={36}
+                            height={36}
+                        />
+                    </button>
                     <span className="text-2xl font-light text-grey-200">
                         2018 WEB
                     </span>

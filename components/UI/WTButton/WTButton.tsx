@@ -11,6 +11,7 @@ type ButtonProps = {
     size?: 's' | 'm' | 'xl'
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
     className?: string
+    type?: 'button' | 'submit' | 'reset' | undefined
 }
 
 const WtButton: FC<ButtonProps> = ({
@@ -18,9 +19,11 @@ const WtButton: FC<ButtonProps> = ({
     outlined = false,
     onClick,
     className = '',
+    type,
 }) => {
     return (
         <button
+            type={type}
             className={`${s.button} ${
                 outlined && s.outlined
             } ${className} active-border-accent active:border active:bg-transparent active:text-accent`}
