@@ -22,6 +22,10 @@ module.exports = {
                 200: '#2D2B2F',
                 300: '#292929',
             },
+            bg: {
+                'grey-opacity': 'rgba(229,229,229, 0.2)',
+            },
+            yellow: '#FFD600',
             white: '#fff',
             disable: '#918F94',
             danger: 'rgba(255, 61, 0, 0.38)',
