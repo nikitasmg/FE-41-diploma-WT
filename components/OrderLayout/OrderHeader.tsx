@@ -17,7 +17,7 @@ const OrderHeader = () => {
         router.push('/order')
     }
     return (
-        <header className="bg-black relative z-0 mb-[205px] pt-[400px]">
+        <header className="bg-black relative z-0 pt-[400px]">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: "url('/order-bg.png')" }}

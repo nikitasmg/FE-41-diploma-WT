@@ -53,4 +53,13 @@ const REVIEWS: IUser.Review[] = [
     },
 ]
 
-export const CONSTANTS = { LINKS, SOCIALS, SUBSCRIPTIONS, REVIEWS }
+const SWITCHERS = [
+    { id: 1, icon: 'coupe', name: 'Купе' },
+    { id: 2, icon: 'plats', name: 'Платцкарт' },
+    { id: 3, icon: 'seat', name: 'Сидячий' },
+    { id: 4, icon: 'luxe', name: 'Люкс' },
+    { id: 5, icon: 'wifi', name: 'Wi-Fi' },
+    { id: 6, icon: 'express', name: 'Экспресс' },
+]
+
+export const CONSTANTS = { LINKS, SOCIALS, SUBSCRIPTIONS, REVIEWS, SWITCHERS }

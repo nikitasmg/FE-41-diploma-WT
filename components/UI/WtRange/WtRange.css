@@ -1,0 +1,8 @@
+.wt-slider .wt-slider__thumb {
+    @apply w-[25px] h-[25px] bg-white rounded-full inset-y-1/2 -translate-y-1/2 border-0 outline-0 z-10
+}
+
+.wt-slider .wt-slider__track {
+    @apply h-[19px] rounded-full
+}
+
