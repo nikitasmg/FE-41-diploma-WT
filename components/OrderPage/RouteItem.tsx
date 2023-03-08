@@ -25,7 +25,36 @@ const RouteItem: FC<RoteProps> = ({ item }) => {
                 <div className="text-[24px] font-bold">
                     {item.arrival.train}
                 </div>
-                <div></div>
+                <div className="flex flex-col">
+                    <span className="flex gap-2">
+                        {item.departure.from.city}{' '}
+                        <Image
+                            src="/icons/icon-arrow-small.svg"
+                            alt={'icon-arroew'}
+                            width={15}
+                            height={5}
+                        />{' '}
+                    </span>
+                    <span className="flex gap-2">
+                        {item.departure.to.city}{' '}
+                        <Image
+                            src="/icons/icon-arrow-small.svg"
+                            alt={'icon-arroew'}
+                            width={15}
+                            height={5}
+                        />{' '}
+                    </span>
+                    <span className="flex gap-2">
+                        {item.arrival.from.city}{' '}
+                        <Image
+                            src="/icons/icon-arrow-small.svg"
+                            alt={'icon-arroew'}
+                            width={15}
+                            height={5}
+                        />{' '}
+                    </span>
+                    <span className="flex gap-2">{item.arrival.to.city} </span>
+                </div>
             </div>
             <div className="flex grow flex-col gap-[60px] border-r-[1px] border-dashed border-grey-200 p-[40px]">
                 <RouteInfo item={item.arrival} type={'arrival'} />

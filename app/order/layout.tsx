@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { CONSTANTS } from '../../commons/constants'
 import OrderFilter from '../../components/OrderLayout/OrderFilter'
 import OrderHeader from '../../components/OrderLayout/OrderHeader'
 import OrderSort from '../../components/OrderLayout/OrderSort'
 import OrderSteps from '../../components/OrderLayout/OrderSteps'
+import OrderLastTickets from '../../components/OrderPage/OrderLastTickets'
 
 export default function Home({ children }: { children: React.ReactNode }) {
     return (
@@ -13,7 +15,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
             <div className="mx-auto flex max-w-7xl gap-[80px] pt-[100px] pb-[122px]">
                 <div className="">
                     <OrderFilter />
-                    <div>Последние билеты</div>
+                    <OrderLastTickets items={CONSTANTS.ROUTES} />
                 </div>
                 <div className="grow">
                     <OrderSort className="mb-[50px]" count={20} />
