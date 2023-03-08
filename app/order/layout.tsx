@@ -20,6 +20,9 @@ export default function Home({ children }: { children: React.ReactNode }) {
                     {children}
                 </div>
             </div>
+            {/* <div className="mx-auto mb-[193px] flex max-w-7xl justify-end"> */}
+            {/*   */}
+            {/* </div> */}
         </>
     )
 }

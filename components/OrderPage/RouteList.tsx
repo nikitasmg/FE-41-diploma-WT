@@ -2,17 +2,17 @@ import type { FC } from 'react'
 import React from 'react'
 
 import type { IRoute } from '../../models'
-import RoteItem from './RoteItem'
+import RouteItem from './RouteItem'
 
 interface ListProps {
     items: IRoute.Item[]
 }
 
-const RoteList: FC<ListProps> = ({ items }) => {
+const RouteList: FC<ListProps> = ({ items }) => {
     return (
-        <div>
+        <div className="flex flex-col gap-[27px]">
             {items.map((el, idx) => (
-                <RoteItem
+                <RouteItem
                     key={el.arrival.train + idx + el.departure.train}
                     item={el}
                 />
@@ -21,4 +21,4 @@ const RoteList: FC<ListProps> = ({ items }) => {
     )
 }
 
-export default RoteList
+export default RouteList
